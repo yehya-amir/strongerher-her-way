@@ -25,9 +25,6 @@ import { FAQ, type FAQItem } from "@/components/FAQ";
 import { CommunityMockup } from "@/components/CommunityMockup";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 
-export default function LandingPage() {
-  return <LandingPageInner />;
-}
 
 const testimonials: Testimonial[] = [
   {
