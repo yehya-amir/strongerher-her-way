@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import {
   Check,
   Play,
@@ -26,24 +25,9 @@ import { FAQ, type FAQItem } from "@/components/FAQ";
 import { CommunityMockup } from "@/components/CommunityMockup";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "StrongerHer Summer Bootcamp — Fitness & Nutrition for Muslim Women" },
-      {
-        name: "description",
-        content:
-          "Join the 6-week StrongerHer Summer Bootcamp starting June 21, 2026. Live coached, women-only fitness and nutrition for busy Muslim women.",
-      },
-      { property: "og:title", content: "StrongerHer Summer Bootcamp" },
-      {
-        property: "og:description",
-        content: "Lose belly fat, build strength, and feel proud of the woman in the mirror.",
-      },
-    ],
-  }),
-  component: LandingPage,
-});
+export default function LandingPage() {
+  return <LandingPageInner />;
+}
 
 const testimonials: Testimonial[] = [
   {
