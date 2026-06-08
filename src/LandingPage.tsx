@@ -343,7 +343,7 @@ However, if you turn your camera on, Coach Hebah can provide real-time coaching,
   },
 ];
 
-function LandingPage() {
+export default function LandingPage() {
   return (
     <main className="bg-background text-foreground overflow-x-hidden">
       {/* NAV */}
