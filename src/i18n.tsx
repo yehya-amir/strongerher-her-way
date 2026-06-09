@@ -212,6 +212,17 @@ export const en = {
     instagram: "Instagram",
   },
   whatsapp: "Have questions? Contact",
+  misc: {
+    countdownLabel: "Bootcamp starts in",
+    days: "Days",
+    hours: "Hours",
+    minutes: "Min",
+    seconds: "Sec",
+    bootcampMember: "Bootcamp Member",
+    readFull: "Read full story →",
+    successStory: "Success Story",
+    close: "Close",
+  },
   faqs: [
     {
       q: "Do I need to be fit before joining?",
