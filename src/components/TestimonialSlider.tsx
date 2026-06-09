@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { X } from "lucide-react";
+import { useLang } from "@/i18n";
+
 
 export type Testimonial = {
   name: string;
@@ -9,7 +11,9 @@ export type Testimonial = {
 };
 
 export function TestimonialSlider({ items }: { items: Testimonial[] }) {
+  const { t: tr } = useLang();
   const [open, setOpen] = useState<Testimonial | null>(null);
+
 
   return (
     <>
@@ -26,7 +30,7 @@ export function TestimonialSlider({ items }: { items: Testimonial[] }) {
                 </div>
                 <div>
                   <p className="font-display text-lg text-primary-deep leading-tight">{t.name}</p>
-                  <p className="text-xs text-muted-foreground">Bootcamp Member</p>
+                  <p className="text-xs text-muted-foreground">{tr.misc.bootcampMember}</p>
                 </div>
               </div>
               <span className="mt-5 self-start inline-block rounded-full bg-accent px-3 py-1 text-xs font-medium text-primary-deep">
@@ -41,6 +45,7 @@ export function TestimonialSlider({ items }: { items: Testimonial[] }) {
               >
                 Read full story →
               </button>
+
             </article>
           ))}
         </div>

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useLang } from "@/i18n";
 
 const TARGET = new Date("2026-06-21T00:00:00Z").getTime();
 
@@ -14,6 +15,7 @@ function diff() {
 }
 
 export function Countdown() {
+  const { t: tr } = useLang();
   const [t, setT] = useState(diff);
   useEffect(() => {
     const i = setInterval(() => setT(diff()), 1000);
@@ -21,15 +23,15 @@ export function Countdown() {
   }, []);
 
   const cells: [string, number][] = [
-    ["Days", t.days],
-    ["Hours", t.hours],
-    ["Min", t.minutes],
-    ["Sec", t.seconds],
+    [tr.misc.days, t.days],
+    [tr.misc.hours, t.hours],
+    [tr.misc.minutes, t.minutes],
+    [tr.misc.seconds, t.seconds],
   ];
 
   return (
     <div className="inline-flex flex-col items-center gap-3">
-      <p className="eyebrow">Bootcamp starts in</p>
+      <p className="eyebrow">{tr.misc.countdownLabel}</p>
       <div className="grid grid-cols-4 gap-2 sm:gap-3">
         {cells.map(([label, v]) => (
           <div
