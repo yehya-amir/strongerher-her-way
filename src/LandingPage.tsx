@@ -18,6 +18,7 @@ import dumbbell from "@/assets/coach-hebah-dumbbell.jpg";
 import coaching from "@/assets/coaching-setup.jpg";
 import nutrition from "@/assets/nutrition-bowl.jpg";
 import lifestyle from "@/assets/lifestyle-tea.jpg";
+import heroProfile from "@/assets/coach-profile-hero.jpg";
 
 import { Countdown } from "@/components/Countdown";
 import { TestimonialSlider, type Testimonial } from "@/components/TestimonialSlider";
