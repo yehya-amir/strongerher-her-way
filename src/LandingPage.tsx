@@ -586,7 +586,7 @@ export default function LandingPage() {
             <div className="absolute -inset-5 bg-gradient-to-br from-primary/25 to-blush/40 rounded-[3rem] blur-2xl -z-10" />
             <div className="relative rounded-[2.5rem] overflow-hidden border-[10px] border-card shadow-[var(--shadow-glow)] aspect-[4/5] max-w-md mx-auto">
               <img
-                src={dumbbell}
+                src={portrait}
                 alt="Coach Hebah holding a dumbbell"
                 className="w-full h-full object-cover"
                 loading="lazy"
