@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { useLang } from "@/i18n";
 
 export function StickyMobileCTA() {
+  const { t } = useLang();
   const [show, setShow] = useState(false);
   useEffect(() => {
     const onScroll = () => setShow(window.scrollY > 600);
@@ -15,7 +17,7 @@ export function StickyMobileCTA() {
       }`}
     >
       <a href="#checkout" className="btn-primary w-full">
-        Join the 6-Week Bootcamp
+        {t.hero.cta}
       </a>
     </div>
   );
