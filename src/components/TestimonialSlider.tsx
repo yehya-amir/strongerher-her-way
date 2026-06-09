@@ -43,8 +43,9 @@ export function TestimonialSlider({ items }: { items: Testimonial[] }) {
                 onClick={() => setOpen(t)}
                 className="mt-6 self-start text-sm font-semibold text-primary hover:text-primary-deep underline underline-offset-4 decoration-primary/40"
               >
-                Read full story →
+                {tr.misc.readFull}
               </button>
+
 
             </article>
           ))}
@@ -63,11 +64,12 @@ export function TestimonialSlider({ items }: { items: Testimonial[] }) {
             <button
               onClick={() => setOpen(null)}
               className="absolute top-4 right-4 p-2 rounded-full hover:bg-muted text-muted-foreground"
-              aria-label="Close"
+              aria-label={tr.misc.close}
             >
               <X size={20} />
             </button>
-            <p className="eyebrow">Success Story</p>
+            <p className="eyebrow">{tr.misc.successStory}</p>
+
             <h3 className="mt-2 text-2xl sm:text-3xl">{open.name}</h3>
             <span className="mt-3 inline-block rounded-full bg-accent px-3 py-1 text-xs font-medium text-primary-deep">
               {open.badge}
