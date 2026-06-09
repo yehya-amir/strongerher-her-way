@@ -18,6 +18,7 @@ import dumbbell from "@/assets/coach-hebah-dumbbell.jpg";
 import coaching from "@/assets/coaching-setup.jpg";
 import nutrition from "@/assets/nutrition-bowl.jpg";
 import lifestyle from "@/assets/lifestyle-tea.jpg";
+import heroProfile from "@/assets/coach-profile-hero.jpg";
 
 import { Countdown } from "@/components/Countdown";
 import { TestimonialSlider, type Testimonial } from "@/components/TestimonialSlider";
@@ -396,7 +397,7 @@ export default function LandingPage() {
             <div className="absolute -inset-6 bg-gradient-to-br from-primary/25 to-blush/40 rounded-[3rem] blur-2xl -z-10" />
             <div className="relative rounded-[2.5rem] overflow-hidden shadow-[var(--shadow-glow)] border-[10px] border-card aspect-[4/5] max-w-md mx-auto">
               <img
-                src={portrait}
+                src={heroProfile}
                 alt="Coach Hebah, founder of StrongerHer"
                 className="w-full h-full object-cover"
                 width={1024}
@@ -585,7 +586,7 @@ export default function LandingPage() {
             <div className="absolute -inset-5 bg-gradient-to-br from-primary/25 to-blush/40 rounded-[3rem] blur-2xl -z-10" />
             <div className="relative rounded-[2.5rem] overflow-hidden border-[10px] border-card shadow-[var(--shadow-glow)] aspect-[4/5] max-w-md mx-auto">
               <img
-                src={dumbbell}
+                src={portrait}
                 alt="Coach Hebah holding a dumbbell"
                 className="w-full h-full object-cover"
                 loading="lazy"
