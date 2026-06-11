@@ -116,7 +116,7 @@ export default function LandingPage() {
 
           {/* Sales video */}
           <div className="mt-5 sm:mt-7">
-            <div className="relative aspect-square sm:aspect-video rounded-2xl overflow-hidden border border-border bg-primary-deep shadow-[var(--shadow-glow)] max-w-2xl mx-auto">
+            <div className="relative aspect-square rounded-2xl overflow-hidden border border-border bg-primary-deep shadow-[var(--shadow-glow)] max-w-3xl mx-auto">
               <video
                 key={salesVideo}
                 src={salesVideo}
