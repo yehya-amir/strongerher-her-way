@@ -100,14 +100,19 @@ export default function LandingPage() {
         <div className="container-narrow max-w-3xl text-center">
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-medium leading-[1.1]">{t.hero.h1}</h1>
 
+          {/* Above-video CTA (mobile-priority) */}
+          <div className="mt-5 sm:mt-6">
+            <a href="#checkout" className="btn-primary">{t.hero.cta}</a>
+          </div>
+
           {/* Sales video placeholder */}
-          <div className="mt-6 sm:mt-8">
+          <div className="mt-5 sm:mt-7">
             <div className="relative aspect-video rounded-2xl overflow-hidden border border-border bg-gradient-to-br from-primary-deep via-primary to-primary-soft shadow-[var(--shadow-glow)] max-w-2xl mx-auto">
               <div className="absolute inset-0 flex flex-col items-center justify-center text-primary-foreground text-center px-6">
                 <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-primary-foreground/15 backdrop-blur grid place-items-center border border-primary-foreground/30">
                   <Play size={28} className="ml-1" />
                 </div>
-                <p className="mt-4 font-display text-lg sm:text-2xl">Sales video coming soon</p>
+                <p className="mt-4 font-display text-lg sm:text-2xl">{t.hero.videoSoon}</p>
               </div>
             </div>
           </div>
