@@ -82,14 +82,14 @@ export default function LandingPage() {
               <Instagram size={18} />
               <span>{INSTAGRAM_HANDLE}</span>
             </a>
-            <button
-              onClick={() => setLang(lang === "en" ? "ar" : "en")}
-              className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-4 sm:px-5 py-2.5 text-sm sm:text-base font-bold shadow-md hover:shadow-lg hover:scale-105 transition-all"
-              aria-label="Toggle language"
+            <a
+              href={t.nav.switchHref}
+              className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-5 sm:px-6 py-3 text-base sm:text-lg font-bold shadow-md hover:shadow-lg hover:scale-105 transition-all"
+              aria-label={`Switch to ${t.nav.switchTo}`}
             >
-              <Languages size={18} />
-              {t.nav.language}
-            </button>
+              <Languages size={20} />
+              {t.nav.switchTo}
+            </a>
           </div>
         </div>
       </header>
