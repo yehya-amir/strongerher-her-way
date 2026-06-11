@@ -33,6 +33,7 @@ import { Countdown } from "@/components/Countdown";
 import { TestimonialSlider } from "@/components/TestimonialSlider";
 import { FAQ, type FAQItem } from "@/components/FAQ";
 import { CommunityMockup } from "@/components/CommunityMockup";
+import { CommunityScreenshots } from "@/components/CommunityScreenshots";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import {
@@ -200,6 +201,12 @@ export default function LandingPage() {
             <Pillar imgSrc={coaching} imgAlt="Online nutrition coaching setup" eyebrow={t.pillars.two.eyebrow} title={t.pillars.two.title} reverse body={t.pillars.two.body} />
             <Pillar customVisual={<CommunityMockup />} eyebrow={t.pillars.three.eyebrow} title={t.pillars.three.title} body={t.pillars.three.body} />
           </div>
+
+          {/* Community screenshots carousel */}
+          <div className="mt-12 md:mt-16">
+            <CommunityScreenshots />
+          </div>
+
           <div className="mt-10 text-center">
             <a href="#checkout" className="btn-primary">{t.hero.cta}</a>
           </div>
