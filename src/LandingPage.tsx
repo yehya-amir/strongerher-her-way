@@ -26,8 +26,8 @@ import coachCurrentDumbbellAsset from "@/assets/coach-current-dumbbell.png.asset
 import coachCurrentLivingRoomAsset from "@/assets/coach-current-living-room.jpg.asset.json";
 import salesVideoEnAsset from "@/assets/sales-video-en.mp4.asset.json";
 import salesVideoArAsset from "@/assets/sales-video-ar.mp4.asset.json";
-import videoThumbEnAsset from "@/assets/video-thumb-en.png.asset.json";
-import videoThumbArAsset from "@/assets/video-thumb-ar.png.asset.json";
+import videoThumbEnAsset from "@/assets/video-thumb-en-v2.png.asset.json";
+import videoThumbArAsset from "@/assets/video-thumb-ar-v2.png.asset.json";
 
 import { Countdown } from "@/components/Countdown";
 import { TestimonialSlider } from "@/components/TestimonialSlider";
