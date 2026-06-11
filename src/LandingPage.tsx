@@ -238,23 +238,56 @@ export default function LandingPage() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl">{t.coach.h2}</h2>
           </div>
 
-          {/* Photo story: 2 before → 2 current. Stacks on mobile, 4-up on desktop. */}
-          <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-5xl mx-auto">
-            {coachPhotos.map((p, i) => (
-              <figure key={i} className="group">
-                <div className="relative rounded-2xl overflow-hidden border-4 border-card shadow-[var(--shadow-card)] aspect-[4/5] bg-muted">
-                  <img
-                    src={p.src}
-                    alt={p.caption}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-                <figcaption className="mt-2 text-center text-xs sm:text-sm font-medium text-primary-deep">
-                  {p.caption}
-                </figcaption>
-              </figure>
-            ))}
+          {/* Timeline: BEFORE pair → TODAY pair, with chip labels between */}
+          <div className="mt-10 max-w-5xl mx-auto space-y-8">
+            {/* BEFORE row */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <span className="inline-flex items-center rounded-full bg-muted text-muted-foreground px-4 py-1.5 text-xs sm:text-sm font-semibold uppercase tracking-widest">
+                  {t.coach.beforeLabel}
+                </span>
+                <div className="flex-1 h-px bg-gradient-to-r from-muted-foreground/40 to-transparent" />
+              </div>
+              <div className="grid grid-cols-2 gap-3 sm:gap-5">
+                {beforePhotos.map((p, i) => (
+                  <figure key={i}>
+                    <div className="relative rounded-2xl overflow-hidden border-4 border-card shadow-[var(--shadow-card)] aspect-[4/5] bg-muted">
+                      <img src={p.src} alt={p.caption} className="w-full h-full object-cover" loading="lazy" />
+                    </div>
+                    <figcaption className="mt-2 text-center text-xs sm:text-sm text-muted-foreground">{p.caption}</figcaption>
+                  </figure>
+                ))}
+              </div>
+            </div>
+
+            {/* Arrow / transformation indicator */}
+            <div className="flex flex-col items-center gap-2 py-2">
+              <div className="h-10 w-px bg-gradient-to-b from-transparent via-primary/50 to-primary" />
+              <span className="inline-block rounded-full bg-gold text-primary-deep px-4 py-1.5 text-xs sm:text-sm font-display font-semibold">
+                {t.coach.timeline[1]}
+              </span>
+              <div className="h-10 w-px bg-gradient-to-b from-primary via-primary/50 to-transparent" />
+            </div>
+
+            {/* TODAY row */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <span className="inline-flex items-center rounded-full bg-primary text-primary-foreground px-4 py-1.5 text-xs sm:text-sm font-semibold uppercase tracking-widest shadow-md">
+                  {t.coach.todayLabel}
+                </span>
+                <div className="flex-1 h-px bg-gradient-to-r from-primary/40 to-transparent" />
+              </div>
+              <div className="grid grid-cols-2 gap-3 sm:gap-5">
+                {todayPhotos.map((p, i) => (
+                  <figure key={i}>
+                    <div className="relative rounded-2xl overflow-hidden border-4 border-card shadow-[var(--shadow-card)] aspect-[4/5] bg-muted ring-2 ring-primary/20">
+                      <img src={p.src} alt={p.caption} className="w-full h-full object-cover" loading="lazy" />
+                    </div>
+                    <figcaption className="mt-2 text-center text-xs sm:text-sm font-medium text-primary-deep">{p.caption}</figcaption>
+                  </figure>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Story copy */}
