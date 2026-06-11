@@ -32,7 +32,7 @@ import videoThumbArAsset from "@/assets/video-thumb-ar.png.asset.json";
 import { Countdown } from "@/components/Countdown";
 import { TestimonialSlider } from "@/components/TestimonialSlider";
 import { FAQ, type FAQItem } from "@/components/FAQ";
-import { CommunityMockup } from "@/components/CommunityMockup";
+
 import { CommunityScreenshots } from "@/components/CommunityScreenshots";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
@@ -77,7 +77,7 @@ export default function LandingPage() {
             <img
               src={logoAsset.url}
               alt="StrongerHer — Fitness & Nutrition for Women"
-              className="h-9 sm:h-12 w-auto"
+              className="h-14 sm:h-20 w-auto"
             />
           </a>
           <div className="flex items-center gap-2 sm:gap-3">
@@ -86,10 +86,10 @@ export default function LandingPage() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Instagram ${INSTAGRAM_HANDLE}`}
-              className="hidden sm:inline-flex items-center gap-1.5 text-sm text-primary-deep hover:text-primary transition-colors"
+              className="inline-flex items-center gap-1.5 text-sm text-primary-deep hover:text-primary transition-colors"
             >
-              <Instagram size={18} />
-              <span>{INSTAGRAM_HANDLE}</span>
+              <Instagram size={20} />
+              <span className="hidden sm:inline">{INSTAGRAM_HANDLE}</span>
             </a>
             <a
               href={t.nav.switchHref}
@@ -116,7 +116,7 @@ export default function LandingPage() {
 
           {/* Sales video */}
           <div className="mt-5 sm:mt-7">
-            <div className="relative aspect-square sm:aspect-video rounded-2xl overflow-hidden border border-border bg-primary-deep shadow-[var(--shadow-glow)] max-w-2xl mx-auto">
+            <div className="relative aspect-square rounded-2xl overflow-hidden border border-border bg-primary-deep shadow-[var(--shadow-glow)] max-w-3xl mx-auto">
               <video
                 key={salesVideo}
                 src={salesVideo}
@@ -199,7 +199,7 @@ export default function LandingPage() {
           <div className="mt-10 space-y-12 md:space-y-16">
             <Pillar imgSrc={dumbbell} imgAlt="Coach Hebah with dumbbell" eyebrow={t.pillars.one.eyebrow} title={t.pillars.one.title} body={t.pillars.one.body} />
             <Pillar imgSrc={coaching} imgAlt="Online nutrition coaching setup" eyebrow={t.pillars.two.eyebrow} title={t.pillars.two.title} reverse body={t.pillars.two.body} />
-            <Pillar customVisual={<CommunityMockup />} eyebrow={t.pillars.three.eyebrow} title={t.pillars.three.title} body={t.pillars.three.body} />
+            <Pillar imgSrc={coachDeskAsset.url} imgAlt="Coach Hebah at her desk" eyebrow={t.pillars.three.eyebrow} title={t.pillars.three.title} body={t.pillars.three.body} />
           </div>
 
           {/* Community screenshots carousel */}
