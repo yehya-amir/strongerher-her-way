@@ -116,8 +116,8 @@ export default function LandingPage() {
         </div>
 
         {/* Sales video — wider container for prominence */}
-        <div className="container-narrow max-w-6xl mt-5 sm:mt-7">
-          <div className="relative aspect-video rounded-2xl overflow-hidden border border-border bg-primary-deep shadow-[var(--shadow-glow)]">
+        <div className="container-narrow max-w-sm sm:max-w-md lg:max-w-lg mt-5 sm:mt-7">
+          <div className="relative aspect-[9/16] min-h-[480px] sm:min-h-[560px] lg:min-h-[640px] rounded-2xl overflow-hidden border border-border bg-primary-deep shadow-[var(--shadow-glow)] mx-auto">
             <video
               key={salesVideo}
               src={salesVideo}
