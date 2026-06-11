@@ -66,6 +66,7 @@ export const en = {
       ],
     },
   },
+  community: { h2: "A Peek Inside the Program" },
   included: {
     h2: "Everything Included",
     items: [
