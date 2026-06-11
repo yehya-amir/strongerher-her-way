@@ -205,7 +205,10 @@ export default function LandingPage() {
           </div>
 
           {/* Community screenshots carousel */}
-          <div className="mt-12 md:mt-16">
+          <div className="mt-12 md:mt-16 text-center max-w-2xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl">{t.community.h2}</h2>
+          </div>
+          <div className="mt-8 md:mt-10">
             <CommunityScreenshots />
           </div>
 
