@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLang } from "@/i18n";
 
-const TARGET = new Date("2026-06-21T00:00:00Z").getTime();
+const TARGET = new Date("2026-06-22T00:00:00Z").getTime();
 
 function diff() {
   const now = Date.now();
@@ -14,7 +14,7 @@ function diff() {
   };
 }
 
-export function Countdown() {
+export function Countdown({ showLabel = true }: { showLabel?: boolean } = {}) {
   const { t: tr } = useLang();
   const [t, setT] = useState(diff);
   useEffect(() => {
@@ -31,7 +31,7 @@ export function Countdown() {
 
   return (
     <div className="inline-flex flex-col items-center gap-3">
-      <p className="eyebrow">{tr.misc.countdownLabel}</p>
+      {showLabel && <p className="eyebrow">{tr.misc.countdownLabel}</p>}
       <div className="grid grid-cols-4 gap-2 sm:gap-3">
         {cells.map(([label, v]) => (
           <div

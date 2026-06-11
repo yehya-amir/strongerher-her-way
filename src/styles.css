@@ -157,11 +157,11 @@
   }
 
   .section-pad {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
   @media (min-width: 768px) {
-    .section-pad { padding-top: 7rem; padding-bottom: 7rem; }
+    .section-pad { padding-top: 4.5rem; padding-bottom: 4.5rem; }
   }
 
   .container-narrow {
