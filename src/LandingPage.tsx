@@ -32,7 +32,7 @@ import videoThumbArAsset from "@/assets/video-thumb-ar.png.asset.json";
 import { Countdown } from "@/components/Countdown";
 import { TestimonialSlider } from "@/components/TestimonialSlider";
 import { FAQ, type FAQItem } from "@/components/FAQ";
-import { CommunityMockup } from "@/components/CommunityMockup";
+
 import { CommunityScreenshots } from "@/components/CommunityScreenshots";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
