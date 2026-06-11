@@ -298,6 +298,7 @@ export const ar: Dict = {
       ],
     },
   },
+  community: { h2: "نظرة داخل البرنامج" },
   included: {
     h2: "كل ما يشمله البرنامج",
     items: [
