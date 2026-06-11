@@ -77,7 +77,7 @@ export default function LandingPage() {
             <img
               src={logoAsset.url}
               alt="StrongerHer — Fitness & Nutrition for Women"
-              className="h-9 sm:h-12 w-auto"
+              className="h-14 sm:h-20 w-auto"
             />
           </a>
           <div className="flex items-center gap-2 sm:gap-3">
@@ -86,10 +86,10 @@ export default function LandingPage() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Instagram ${INSTAGRAM_HANDLE}`}
-              className="hidden sm:inline-flex items-center gap-1.5 text-sm text-primary-deep hover:text-primary transition-colors"
+              className="inline-flex items-center gap-1.5 text-sm text-primary-deep hover:text-primary transition-colors"
             >
-              <Instagram size={18} />
-              <span>{INSTAGRAM_HANDLE}</span>
+              <Instagram size={20} />
+              <span className="hidden sm:inline">{INSTAGRAM_HANDLE}</span>
             </a>
             <a
               href={t.nav.switchHref}
