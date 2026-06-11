@@ -112,7 +112,14 @@ const _unused = [
 const includedIcons = [Video, MessageCircle, Sparkles, Play, Heart, Check, Users, Calendar];
 
 export default function LandingPage() {
-  const { t, lang, setLang } = useLang();
+  const { t, lang } = useLang();
+  const testimonials = lang === "ar" ? testimonialsAr : testimonialsEn;
+  const coachPhotos = [
+    { src: coachBeforeLabAsset.url, caption: t.coach.photoCaptions[0] },
+    { src: coachBeforeRainbowAsset.url, caption: t.coach.photoCaptions[1] },
+    { src: coachCurrentDumbbellAsset.url, caption: t.coach.photoCaptions[2] },
+    { src: coachCurrentLivingRoomAsset.url, caption: t.coach.photoCaptions[3] },
+  ];
 
   const faqItems: FAQItem[] = t.faqs.map((f) => ({ q: f.q, a: f.a }));
   const compareRows = t.compare.rows.map((label, i) => {
