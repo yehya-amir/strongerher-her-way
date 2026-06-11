@@ -20,10 +20,14 @@ import coaching from "@/assets/coaching-setup.jpg";
 import nutrition from "@/assets/nutrition-bowl.jpg";
 import coachDeskAsset from "@/assets/coach-hebah-desk.jpg.asset.json";
 import logoAsset from "@/assets/strongerher-logo.png.asset.json";
-import coachBeforeLabAsset from "@/assets/coach-before-lab.jpg.asset.json";
-import coachBeforeRainbowAsset from "@/assets/coach-before-rainbow.jpg.asset.json";
+import coachBeforeLabAsset from "@/assets/coach-before-lab-v2.jpg.asset.json";
+import coachBeforeRainbowAsset from "@/assets/coach-before-rainbow-v2.jpg.asset.json";
 import coachCurrentDumbbellAsset from "@/assets/coach-current-dumbbell.png.asset.json";
 import coachCurrentLivingRoomAsset from "@/assets/coach-current-living-room.jpg.asset.json";
+import salesVideoEnAsset from "@/assets/sales-video-en.mp4.asset.json";
+import salesVideoArAsset from "@/assets/sales-video-ar.mp4.asset.json";
+import videoThumbEnAsset from "@/assets/video-thumb-en.png.asset.json";
+import videoThumbArAsset from "@/assets/video-thumb-ar.png.asset.json";
 
 import { Countdown } from "@/components/Countdown";
 import { TestimonialSlider } from "@/components/TestimonialSlider";
@@ -46,9 +50,13 @@ const includedIcons = [Video, MessageCircle, Sparkles, Play, Heart, Check, Users
 export default function LandingPage() {
   const { t, lang } = useLang();
   const testimonials = lang === "ar" ? testimonialsAr : testimonialsEn;
-  const coachPhotos = [
+  const salesVideo = lang === "ar" ? salesVideoArAsset.url : salesVideoEnAsset.url;
+  const videoPoster = lang === "ar" ? videoThumbArAsset.url : videoThumbEnAsset.url;
+  const beforePhotos = [
     { src: coachBeforeLabAsset.url, caption: t.coach.photoCaptions[0] },
     { src: coachBeforeRainbowAsset.url, caption: t.coach.photoCaptions[1] },
+  ];
+  const todayPhotos = [
     { src: coachCurrentDumbbellAsset.url, caption: t.coach.photoCaptions[2] },
     { src: coachCurrentLivingRoomAsset.url, caption: t.coach.photoCaptions[3] },
   ];
