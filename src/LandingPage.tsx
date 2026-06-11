@@ -199,7 +199,7 @@ export default function LandingPage() {
           <div className="mt-10 space-y-12 md:space-y-16">
             <Pillar imgSrc={dumbbell} imgAlt="Coach Hebah with dumbbell" eyebrow={t.pillars.one.eyebrow} title={t.pillars.one.title} body={t.pillars.one.body} />
             <Pillar imgSrc={coaching} imgAlt="Online nutrition coaching setup" eyebrow={t.pillars.two.eyebrow} title={t.pillars.two.title} reverse body={t.pillars.two.body} />
-            <Pillar customVisual={<CommunityMockup />} eyebrow={t.pillars.three.eyebrow} title={t.pillars.three.title} body={t.pillars.three.body} />
+            <Pillar imgSrc={coachDeskAsset.url} imgAlt="Coach Hebah at her desk" eyebrow={t.pillars.three.eyebrow} title={t.pillars.three.title} body={t.pillars.three.body} />
           </div>
 
           {/* Community screenshots carousel */}
