@@ -20,9 +20,13 @@ import coaching from "@/assets/coaching-setup.jpg";
 import nutrition from "@/assets/nutrition-bowl.jpg";
 import coachDeskAsset from "@/assets/coach-hebah-desk.jpg.asset.json";
 import logoAsset from "@/assets/strongerher-logo.png.asset.json";
+import coachBeforeLabAsset from "@/assets/coach-before-lab.jpg.asset.json";
+import coachBeforeRainbowAsset from "@/assets/coach-before-rainbow.jpg.asset.json";
+import coachCurrentDumbbellAsset from "@/assets/coach-current-dumbbell.png.asset.json";
+import coachCurrentLivingRoomAsset from "@/assets/coach-current-living-room.jpg.asset.json";
 
 import { Countdown } from "@/components/Countdown";
-import { TestimonialSlider, type Testimonial } from "@/components/TestimonialSlider";
+import { TestimonialSlider } from "@/components/TestimonialSlider";
 import { FAQ, type FAQItem } from "@/components/FAQ";
 import { CommunityMockup } from "@/components/CommunityMockup";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
@@ -32,9 +36,11 @@ import {
   STRIPE_URL,
   INSTAGRAM_URL,
   INSTAGRAM_HANDLE,
+  testimonialsEn,
+  testimonialsAr,
 } from "@/i18n";
 
-const testimonials: Testimonial[] = [
+const _unused = [
   {
     name: "Salma Hassan",
     badge: "Lost 3 kg and Finally Stayed Consistent",
