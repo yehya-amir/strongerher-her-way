@@ -20,10 +20,14 @@ import coaching from "@/assets/coaching-setup.jpg";
 import nutrition from "@/assets/nutrition-bowl.jpg";
 import coachDeskAsset from "@/assets/coach-hebah-desk.jpg.asset.json";
 import logoAsset from "@/assets/strongerher-logo.png.asset.json";
-import coachBeforeLabAsset from "@/assets/coach-before-lab.jpg.asset.json";
-import coachBeforeRainbowAsset from "@/assets/coach-before-rainbow.jpg.asset.json";
+import coachBeforeLabAsset from "@/assets/coach-before-lab-v2.jpg.asset.json";
+import coachBeforeRainbowAsset from "@/assets/coach-before-rainbow-v2.jpg.asset.json";
 import coachCurrentDumbbellAsset from "@/assets/coach-current-dumbbell.png.asset.json";
 import coachCurrentLivingRoomAsset from "@/assets/coach-current-living-room.jpg.asset.json";
+import salesVideoEnAsset from "@/assets/sales-video-en.mp4.asset.json";
+import salesVideoArAsset from "@/assets/sales-video-ar.mp4.asset.json";
+import videoThumbEnAsset from "@/assets/video-thumb-en.png.asset.json";
+import videoThumbArAsset from "@/assets/video-thumb-ar.png.asset.json";
 
 import { Countdown } from "@/components/Countdown";
 import { TestimonialSlider } from "@/components/TestimonialSlider";
@@ -46,9 +50,13 @@ const includedIcons = [Video, MessageCircle, Sparkles, Play, Heart, Check, Users
 export default function LandingPage() {
   const { t, lang } = useLang();
   const testimonials = lang === "ar" ? testimonialsAr : testimonialsEn;
-  const coachPhotos = [
+  const salesVideo = lang === "ar" ? salesVideoArAsset.url : salesVideoEnAsset.url;
+  const videoPoster = lang === "ar" ? videoThumbArAsset.url : videoThumbEnAsset.url;
+  const beforePhotos = [
     { src: coachBeforeLabAsset.url, caption: t.coach.photoCaptions[0] },
     { src: coachBeforeRainbowAsset.url, caption: t.coach.photoCaptions[1] },
+  ];
+  const todayPhotos = [
     { src: coachCurrentDumbbellAsset.url, caption: t.coach.photoCaptions[2] },
     { src: coachCurrentLivingRoomAsset.url, caption: t.coach.photoCaptions[3] },
   ];
@@ -105,15 +113,18 @@ export default function LandingPage() {
             <a href="#checkout" className="btn-primary">{t.hero.cta}</a>
           </div>
 
-          {/* Sales video placeholder */}
+          {/* Sales video */}
           <div className="mt-5 sm:mt-7">
-            <div className="relative aspect-video rounded-2xl overflow-hidden border border-border bg-gradient-to-br from-primary-deep via-primary to-primary-soft shadow-[var(--shadow-glow)] max-w-2xl mx-auto">
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-primary-foreground text-center px-6">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-primary-foreground/15 backdrop-blur grid place-items-center border border-primary-foreground/30">
-                  <Play size={28} className="ml-1" />
-                </div>
-                <p className="mt-4 font-display text-lg sm:text-2xl">{t.hero.videoSoon}</p>
-              </div>
+            <div className="relative aspect-square sm:aspect-video rounded-2xl overflow-hidden border border-border bg-primary-deep shadow-[var(--shadow-glow)] max-w-2xl mx-auto">
+              <video
+                key={salesVideo}
+                src={salesVideo}
+                poster={videoPoster}
+                controls
+                playsInline
+                preload="metadata"
+                className="w-full h-full object-cover block"
+              />
             </div>
           </div>
 
@@ -227,23 +238,56 @@ export default function LandingPage() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl">{t.coach.h2}</h2>
           </div>
 
-          {/* Photo story: 2 before → 2 current. Stacks on mobile, 4-up on desktop. */}
-          <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-5xl mx-auto">
-            {coachPhotos.map((p, i) => (
-              <figure key={i} className="group">
-                <div className="relative rounded-2xl overflow-hidden border-4 border-card shadow-[var(--shadow-card)] aspect-[4/5] bg-muted">
-                  <img
-                    src={p.src}
-                    alt={p.caption}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-                <figcaption className="mt-2 text-center text-xs sm:text-sm font-medium text-primary-deep">
-                  {p.caption}
-                </figcaption>
-              </figure>
-            ))}
+          {/* Timeline: BEFORE pair → TODAY pair, with chip labels between */}
+          <div className="mt-10 max-w-5xl mx-auto space-y-8">
+            {/* BEFORE row */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <span className="inline-flex items-center rounded-full bg-muted text-muted-foreground px-4 py-1.5 text-xs sm:text-sm font-semibold uppercase tracking-widest">
+                  {t.coach.beforeLabel}
+                </span>
+                <div className="flex-1 h-px bg-gradient-to-r from-muted-foreground/40 to-transparent" />
+              </div>
+              <div className="grid grid-cols-2 gap-3 sm:gap-5">
+                {beforePhotos.map((p, i) => (
+                  <figure key={i}>
+                    <div className="relative rounded-2xl overflow-hidden border-4 border-card shadow-[var(--shadow-card)] aspect-[4/5] bg-muted">
+                      <img src={p.src} alt={p.caption} className="w-full h-full object-cover" loading="lazy" />
+                    </div>
+                    <figcaption className="mt-2 text-center text-xs sm:text-sm text-muted-foreground">{p.caption}</figcaption>
+                  </figure>
+                ))}
+              </div>
+            </div>
+
+            {/* Arrow / transformation indicator */}
+            <div className="flex flex-col items-center gap-2 py-2">
+              <div className="h-10 w-px bg-gradient-to-b from-transparent via-primary/50 to-primary" />
+              <span className="inline-block rounded-full bg-gold text-primary-deep px-4 py-1.5 text-xs sm:text-sm font-display font-semibold">
+                {t.coach.timeline[1]}
+              </span>
+              <div className="h-10 w-px bg-gradient-to-b from-primary via-primary/50 to-transparent" />
+            </div>
+
+            {/* TODAY row */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <span className="inline-flex items-center rounded-full bg-primary text-primary-foreground px-4 py-1.5 text-xs sm:text-sm font-semibold uppercase tracking-widest shadow-md">
+                  {t.coach.todayLabel}
+                </span>
+                <div className="flex-1 h-px bg-gradient-to-r from-primary/40 to-transparent" />
+              </div>
+              <div className="grid grid-cols-2 gap-3 sm:gap-5">
+                {todayPhotos.map((p, i) => (
+                  <figure key={i}>
+                    <div className="relative rounded-2xl overflow-hidden border-4 border-card shadow-[var(--shadow-card)] aspect-[4/5] bg-muted ring-2 ring-primary/20">
+                      <img src={p.src} alt={p.caption} className="w-full h-full object-cover" loading="lazy" />
+                    </div>
+                    <figcaption className="mt-2 text-center text-xs sm:text-sm font-medium text-primary-deep">{p.caption}</figcaption>
+                  </figure>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Story copy */}
