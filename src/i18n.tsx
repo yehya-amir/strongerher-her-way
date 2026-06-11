@@ -66,6 +66,7 @@ export const en = {
       ],
     },
   },
+  community: { h2: "A Peek Inside the Program" },
   included: {
     h2: "Everything Included",
     items: [
@@ -297,6 +298,7 @@ export const ar: Dict = {
       ],
     },
   },
+  community: { h2: "نظرة داخل البرنامج" },
   included: {
     h2: "كل ما يشمله البرنامج",
     items: [

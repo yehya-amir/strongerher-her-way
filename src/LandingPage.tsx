@@ -113,22 +113,24 @@ export default function LandingPage() {
           <div className="mt-5 sm:mt-6">
             <a href="#checkout" className="btn-primary">{t.hero.cta}</a>
           </div>
+        </div>
 
-          {/* Sales video */}
-          <div className="mt-5 sm:mt-7">
-            <div className="relative aspect-square rounded-2xl overflow-hidden border border-border bg-primary-deep shadow-[var(--shadow-glow)] max-w-3xl mx-auto">
-              <video
-                key={salesVideo}
-                src={salesVideo}
-                poster={videoPoster}
-                controls
-                playsInline
-                preload="metadata"
-                className="w-full h-full object-cover block"
-              />
-            </div>
+        {/* Sales video — wider container for prominence */}
+        <div className="container-narrow max-w-6xl mt-5 sm:mt-7">
+          <div className="relative aspect-video rounded-2xl overflow-hidden border border-border bg-primary-deep shadow-[var(--shadow-glow)]">
+            <video
+              key={salesVideo}
+              src={salesVideo}
+              poster={videoPoster}
+              controls
+              playsInline
+              preload="metadata"
+              className="w-full h-full object-cover block"
+            />
           </div>
+        </div>
 
+        <div className="container-narrow max-w-3xl text-center">
           <p className="mt-5 sm:mt-6 text-base sm:text-lg text-foreground/80 max-w-2xl mx-auto">{t.hero.p1}</p>
           <p className="mt-3 text-sm sm:text-base text-muted-foreground italic max-w-xl mx-auto">{t.hero.p2}</p>
 
@@ -203,7 +205,10 @@ export default function LandingPage() {
           </div>
 
           {/* Community screenshots carousel */}
-          <div className="mt-12 md:mt-16">
+          <div className="mt-12 md:mt-16 text-center max-w-2xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl">{t.community.h2}</h2>
+          </div>
+          <div className="mt-8 md:mt-10">
             <CommunityScreenshots />
           </div>
 
