@@ -217,21 +217,41 @@ export default function LandingPage() {
 
       {/* MEET COACH */}
       <section id="coach" className="section-pad bg-gradient-to-b from-accent/40 to-background">
-        <div className="container-narrow grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-          <div className="relative">
-            <div className="absolute -inset-5 bg-gradient-to-br from-primary/25 to-blush/40 rounded-[3rem] blur-2xl -z-10" />
-            <div className="relative rounded-[2rem] overflow-hidden border-[8px] border-card shadow-[var(--shadow-glow)] aspect-[4/5] max-w-md mx-auto">
-              <img src={coachDeskAsset.url} alt="Coach Hebah" className="w-full h-full object-cover" loading="lazy" />
-            </div>
-          </div>
-          <div>
+        <div className="container-narrow">
+          <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl md:text-5xl">{t.coach.h2}</h2>
-            <div className="mt-4 space-y-3 text-foreground/80 text-[16px] leading-relaxed max-w-xl">
-              {t.coach.body.map((p, i) => <p key={i}>{p}</p>)}
-            </div>
+          </div>
+
+          {/* Photo story: 2 before → 2 current. Stacks on mobile, 4-up on desktop. */}
+          <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-5xl mx-auto">
+            {coachPhotos.map((p, i) => (
+              <figure key={i} className="group">
+                <div className="relative rounded-2xl overflow-hidden border-4 border-card shadow-[var(--shadow-card)] aspect-[4/5] bg-muted">
+                  <img
+                    src={p.src}
+                    alt={p.caption}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption className="mt-2 text-center text-xs sm:text-sm font-medium text-primary-deep">
+                  {p.caption}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+
+          {/* Story copy */}
+          <div className="mt-10 max-w-2xl mx-auto space-y-4 text-foreground/85 text-[16px] leading-relaxed">
+            {t.coach.body.map((p, i) => <p key={i}>{p}</p>)}
+          </div>
+
+          <div className="mt-8 text-center">
+            <a href="#checkout" className="btn-primary">{t.hero.cta}</a>
           </div>
         </div>
       </section>
+
 
       {/* COMPARISON */}
       <section id="compare" className="section-pad">
