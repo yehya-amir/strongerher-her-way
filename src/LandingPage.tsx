@@ -113,15 +113,18 @@ export default function LandingPage() {
             <a href="#checkout" className="btn-primary">{t.hero.cta}</a>
           </div>
 
-          {/* Sales video placeholder */}
+          {/* Sales video */}
           <div className="mt-5 sm:mt-7">
-            <div className="relative aspect-video rounded-2xl overflow-hidden border border-border bg-gradient-to-br from-primary-deep via-primary to-primary-soft shadow-[var(--shadow-glow)] max-w-2xl mx-auto">
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-primary-foreground text-center px-6">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-primary-foreground/15 backdrop-blur grid place-items-center border border-primary-foreground/30">
-                  <Play size={28} className="ml-1" />
-                </div>
-                <p className="mt-4 font-display text-lg sm:text-2xl">{t.hero.videoSoon}</p>
-              </div>
+            <div className="relative aspect-square sm:aspect-video rounded-2xl overflow-hidden border border-border bg-primary-deep shadow-[var(--shadow-glow)] max-w-2xl mx-auto">
+              <video
+                key={salesVideo}
+                src={salesVideo}
+                poster={videoPoster}
+                controls
+                playsInline
+                preload="metadata"
+                className="w-full h-full object-cover block"
+              />
             </div>
           </div>
 
