@@ -4,7 +4,7 @@ import { useLang } from "@/i18n";
 
 import boat from "@/assets/comm-ar-boat.jpg.asset.json";
 import firstClass from "@/assets/comm-ar-firstclass.jpg.asset.json";
-import gettingThere from "@/assets/comm-both-gettingthere.jpg.asset.json";
+import gettingThere from "@/assets/comm-both-gettingthere-v2.jpg.asset.json";
 import iftars from "@/assets/comm-both-iftars.jpg.asset.json";
 import seeYou from "@/assets/comm-both-seeyou.jpg.asset.json";
 import fasting from "@/assets/comm-en-fasting-v2.jpg.asset.json";
