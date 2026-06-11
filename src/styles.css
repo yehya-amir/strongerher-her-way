@@ -175,3 +175,29 @@
     padding-inline: 1.25rem;
   }
 }
+
+/* RTL polish: keep checkmark icons on the right edge of list items and add
+   consistent spacing in Arabic content. Lucide icons are inline SVGs that
+   visually flip naturally; only spacing/alignment needs adjustment. */
+[dir="rtl"] {
+  font-family: "Cairo", "Tajawal", "Noto Naskh Arabic", "Inter", system-ui, sans-serif;
+}
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4 {
+  font-family: "Cairo", "Tajawal", "Noto Naskh Arabic", var(--font-display);
+  letter-spacing: 0;
+  line-height: 1.35;
+}
+[dir="rtl"] .btn-primary,
+[dir="rtl"] .btn-ghost {
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: 1rem;
+}
+[dir="rtl"] .eyebrow {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
