@@ -7,7 +7,7 @@ import firstClass from "@/assets/comm-ar-firstclass.jpg.asset.json";
 import gettingThere from "@/assets/comm-both-gettingthere.jpg.asset.json";
 import iftars from "@/assets/comm-both-iftars.jpg.asset.json";
 import seeYou from "@/assets/comm-both-seeyou.jpg.asset.json";
-import fasting from "@/assets/comm-en-fasting.jpg.asset.json";
+import fasting from "@/assets/comm-en-fasting-v2.jpg.asset.json";
 import peer from "@/assets/comm-en-peerpressure.jpg.asset.json";
 
 type Shot = { src: string; alt: string; langs: ("en" | "ar")[] };
