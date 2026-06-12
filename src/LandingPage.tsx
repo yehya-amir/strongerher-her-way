@@ -355,9 +355,6 @@ export default function LandingPage() {
                 </li>
               ))}
             </ul>
-            <div className="mt-6">
-              <img src={coachDeskAsset.url} alt="Coach Hebah at her desk" className="w-full rounded-2xl object-cover aspect-[4/3]" loading="lazy" />
-            </div>
           </div>
           <div className="card-soft p-6 sm:p-8">
             <h2 className="text-2xl sm:text-3xl">{t.how.h2}</h2>
