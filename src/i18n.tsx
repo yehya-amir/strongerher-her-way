@@ -148,7 +148,12 @@ export const en = {
   },
   nutritionBand: {
     h2: "Learn nutrition that actually fits your everyday life.",
-    p: "No meal replacements. No extreme diets. Just clear principles around protein, portions, cravings, energy, and optional Sunnah fasting — taught live, so you can ask the questions specific to your body.",
+    p: [
+      "No meal replacements. No extreme diets.",
+      "You'll learn the fundamentals of protein, how to structure your plate, manage cravings, boost your energy, and how the 5:2 method combined with Sunnah fasting method can support both weight loss and long-term health.",
+      "I'll also share how you can use powerful herbs hiding in our own kitchens—like turmeric, black seed, cinnamon, and olive leaf—to reduce inflammation, improve health, balance blood sugar, control appetite, and support sustainable fat loss.",
+      "These are some of the most effective tools I've discovered in more than 25 years of working with women, yet they're rarely discussed in traditional nutrition programs.",
+    ],
   },
   schedule: {
     h2: "Sample Weekly Class Schedule Across Time Zones",
