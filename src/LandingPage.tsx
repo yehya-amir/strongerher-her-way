@@ -17,7 +17,8 @@ import {
 
 import dumbbell from "@/assets/coach-hebah-dumbbell.jpg";
 import coaching from "@/assets/coaching-setup.jpg";
-import nutrition from "@/assets/nutrition-bowl.jpg";
+import nutritionAsset from "@/assets/nutrition-herbs.png.asset.json";
+const nutrition = nutritionAsset.url;
 import coachDeskAsset from "@/assets/coach-hebah-desk.jpg.asset.json";
 import logoAsset from "@/assets/strongerher-logo.png.asset.json";
 import coachBeforeLabAsset from "@/assets/coach-before-lab-v3.jpg.asset.json";
