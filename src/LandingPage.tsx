@@ -17,7 +17,8 @@ import {
 
 import dumbbell from "@/assets/coach-hebah-dumbbell.jpg";
 import coaching from "@/assets/coaching-setup.jpg";
-import nutrition from "@/assets/nutrition-bowl.jpg";
+import nutritionAsset from "@/assets/nutrition-herbs.png.asset.json";
+const nutrition = nutritionAsset.url;
 import coachDeskAsset from "@/assets/coach-hebah-desk.jpg.asset.json";
 import logoAsset from "@/assets/strongerher-logo.png.asset.json";
 import coachBeforeLabAsset from "@/assets/coach-before-lab-v3.jpg.asset.json";
@@ -380,7 +381,9 @@ export default function LandingPage() {
           <img src={nutrition} alt="" className="rounded-3xl shadow-[var(--shadow-card)] aspect-[4/3] object-cover w-full" loading="lazy" />
           <div>
             <h2 className="text-3xl sm:text-4xl">{t.nutritionBand.h2}</h2>
-            <p className="mt-4 text-foreground/75">{t.nutritionBand.p}</p>
+            {t.nutritionBand.p.map((para, i) => (
+              <p key={i} className="mt-4 text-foreground/75">{para}</p>
+            ))}
           </div>
         </div>
       </section>

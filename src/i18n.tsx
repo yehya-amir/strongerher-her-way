@@ -148,7 +148,12 @@ export const en = {
   },
   nutritionBand: {
     h2: "Learn nutrition that actually fits your everyday life.",
-    p: "No meal replacements. No extreme diets. Just clear principles around protein, portions, cravings, energy, and optional Sunnah fasting — taught live, so you can ask the questions specific to your body.",
+    p: [
+      "No meal replacements. No extreme diets.",
+      "You'll learn the fundamentals of protein, how to structure your plate, manage cravings, boost your energy, and how the 5:2 method combined with Sunnah fasting method can support both weight loss and long-term health.",
+      "I'll also share how you can use powerful herbs hiding in our own kitchens—like turmeric, black seed, cinnamon, and olive leaf—to reduce inflammation, improve health, balance blood sugar, control appetite, and support sustainable fat loss.",
+      "These are some of the most effective tools I've discovered in more than 25 years of working with women, yet they're rarely discussed in traditional nutrition programs.",
+    ],
   },
   schedule: {
     h2: "Sample Weekly Class Schedule Across Time Zones",
@@ -380,7 +385,12 @@ export const ar: Dict = {
   },
   nutritionBand: {
     h2: "تعلّمي تغذية تناسب حياتكِ اليومية فعلاً.",
-    p: "لا بدائل وجبات. لا حميات قاسية. فقط مبادئ واضحة حول البروتين، والحصص، والرغبات، والطاقة، والصيام النبوي الاختياري — تُدرَّس مباشرة، لتسألي عن جسمكِ أنتِ تحديداً.",
+    p: [
+      "بدون بدائل وجبات، وبدون حميات قاسية.",
+      "ستتعلّمين كيف تحصلين على احتياجكِ من البروتين، وكيفية ترتيب وجباتكِ بطريقة بسيطة وعملية، والسيطرة على الشهية والرغبة في الأكل، وزيادة مستوى طاقتكِ خلال اليوم. وسنتحدث أيضاً عن طريقة 5:2 المبنية على الصيام يومين في الأسبوع، وكيف يمكن أن تدعم خسارة الوزن وتحسين الصحة على المدى الطويل.",
+      "كما سأشارككِ كيفية الاستفادة من بعض الأعشاب القوية الموجودة في مطابخنا — مثل الكركم، والحبة السوداء، والقرفة، وورق الزيتون — للمساعدة في تقليل الالتهاب، وتحسين الصحة، وتنظيم سكر الدم، والسيطرة على الشهية، ودعم خسارة الدهون بطريقة مستدامة.",
+      "هذه من أكثر الأدوات التي رأيتُها فائدةً وتأثيراً مع النساء خلال أكثر من 25 عاماً من التدريب والتوجيه.",
+    ],
   },
   schedule: {
     h2: "نموذج جدول أسبوعي حسب التوقيت",
