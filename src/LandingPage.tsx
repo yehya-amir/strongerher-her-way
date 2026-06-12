@@ -381,7 +381,9 @@ export default function LandingPage() {
           <img src={nutrition} alt="" className="rounded-3xl shadow-[var(--shadow-card)] aspect-[4/3] object-cover w-full" loading="lazy" />
           <div>
             <h2 className="text-3xl sm:text-4xl">{t.nutritionBand.h2}</h2>
-            <p className="mt-4 text-foreground/75">{t.nutritionBand.p}</p>
+            {t.nutritionBand.p.map((para, i) => (
+              <p key={i} className="mt-4 text-foreground/75">{para}</p>
+            ))}
           </div>
         </div>
       </section>
